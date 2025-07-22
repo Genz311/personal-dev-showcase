@@ -11,7 +11,7 @@ export const isValidUsername = (username: string): boolean => {
 
 export const isValidPassword = (password: string): boolean => {
   // Password must be at least 6 characters
-  return password && password.length >= 6;
+  return Boolean(password && password.length >= 6);
 };
 
 export interface ValidationError {

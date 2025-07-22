@@ -177,7 +177,7 @@ export const refreshToken = async (req: Request, res: Response): Promise<void> =
   }
 };
 
-export const logout = async (req: Request, res: Response): Promise<void> => {
+export const logout = async (_req: Request, res: Response): Promise<void> => {
   // In a production app, you might want to:
   // 1. Add the refresh token to a blacklist
   // 2. Clear any server-side sessions

@@ -51,7 +51,7 @@ export const authenticateToken = async (
 
 export const optionalAuthentication = async (
   req: AuthRequest,
-  res: Response,
+  _res: Response,
   next: NextFunction
 ): Promise<void> => {
   try {
