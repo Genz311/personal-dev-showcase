@@ -159,8 +159,50 @@ CLOUDINARY_API_SECRET=your_api_secret
 PORT=3000
 ```
 
+## Authentication System
+
+The authentication system is implemented with JWT tokens. Key features:
+- User registration with email/username validation
+- Login with email or username
+- Access tokens (15min) and refresh tokens (7 days)
+- Password hashing with bcrypt
+- Protected route middleware
+
+See `backend/AUTH.md` for detailed API documentation.
+
+## Testing
+
+### Run All Tests
+```bash
+# Backend tests
+cd backend
+npm test
+
+# Frontend tests
+cd frontend
+npm test
+```
+
+### Run Specific Test Categories
+```bash
+# Authentication tests
+npm test -- auth
+
+# Database model tests
+npm test -- models
+
+# Utility tests
+npm test -- utils
+```
+
 ## Important: Project Status
-This project is now set up with the basic infrastructure. The next steps are:
-1. Set up Prisma schema and database models
-2. Implement authentication flow
-3. Build core features incrementally following the specs in `/specs/requirements.md`
+This project has completed:
+1. ✅ Basic infrastructure setup
+2. ✅ Database models and schema with Prisma
+3. ✅ JWT authentication system
+
+Next steps:
+1. Implement user profile endpoints
+2. Create project CRUD endpoints
+3. Build frontend authentication flow
+4. Implement search functionality

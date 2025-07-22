@@ -7,24 +7,32 @@
   - Configure ESLint, Prettier, and basic testing setup
   - _Requirements: 1.1, 2.1, 3.1, 4.1, 5.1_
 
-- [ ] 2. データベースとモデル設計
-- [ ] 2.1 データベース接続とPrismaセットアップ
+- [x] 2. データベースとモデル設計
+- [x] 2.1 データベース接続とPrismaセットアップ
   - Install and configure Prisma with PostgreSQL
   - Create database schema for User and Project models
   - Generate Prisma client and test database connection
   - _Requirements: 1.1, 2.1, 3.1_
 
-- [ ] 2.2 ユーザーモデルの実装とテスト
+- [x] 2.2 ユーザーモデルの実装とテスト
   - Implement User model with validation
   - Create unit tests for User model operations
   - Test user creation, update, and retrieval functions
   - _Requirements: 1.1, 1.3, 6.2_
 
-- [ ] 2.3 プロジェクトモデルの実装とテスト
+- [x] 2.3 プロジェクトモデルの実装とテスト
   - Implement Project model with relationships to User
   - Create unit tests for Project model operations
   - Test project CRUD operations and user associations
   - _Requirements: 2.1, 2.2, 3.1, 3.2_
+
+- [x] 2.4 技術スタックモデルの実装とテスト
+  - Implement Technology model with many-to-many relationship to Projects
+  - Create comprehensive unit tests for Technology model operations
+  - Test technology-project associations and cascade deletions
+  - Create seed script with sample technologies and projects
+  - _Requirements: 2.1, 4.2_
+
 
 - [ ] 3. 認証システムの実装
 - [ ] 3.1 JWT認証バックエンドの実装
