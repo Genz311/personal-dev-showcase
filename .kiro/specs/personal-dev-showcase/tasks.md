@@ -47,15 +47,15 @@
   - Implement error handling for invalid credentials
   - _Requirements: 1.1, 1.2, 1.4_
 
-- [ ] 4. プロジェクトCRUD APIの実装
-- [ ] 4.1 プロジェクト管理APIエンドポイント
+- [x] 4. プロジェクトCRUD APIの実装
+- [x] 4.1 プロジェクト管理APIエンドポイント
   - Implement project CRUD endpoints (create, read, update, delete)
   - Add project visibility controls (public/private)
   - Create middleware for project ownership verification
   - Write comprehensive API tests for project operations
   - _Requirements: 2.1, 2.2, 2.3, 3.1, 3.2, 3.3_
 
-- [ ] 4.2 プロジェクト検索とフィルタリングAPI
+- [x] 4.2 プロジェクト検索とフィルタリングAPI
   - Implement project listing endpoint with pagination
   - Add search functionality by keywords and tech stack
   - Create filtering by technology categories
