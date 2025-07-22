@@ -1,16 +1,15 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useAuthStore } from '../store/authStore';
 
 const Header = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  // TODO: Replace with actual auth state from store
-  const isAuthenticated = false;
-  // const user = null; // TODO: Get from auth store
+  const { isAuthenticated, logout } = useAuthStore();
 
-  const handleLogout = () => {
-    // TODO: Implement logout logic
-    navigate('/login');
+  const handleLogout = async () => {
+    await logout();
+    navigate('/');
   };
 
   return (

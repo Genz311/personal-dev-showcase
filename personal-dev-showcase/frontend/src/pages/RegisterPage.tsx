@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { authService } from '../services/authService';
+import { useAuthStore } from '../store/authStore';
 import Input from '../components/Input';
 import Button from '../components/Button';
 
@@ -15,6 +15,7 @@ interface RegisterFormData {
 
 const RegisterPage = () => {
   const navigate = useNavigate();
+  const registerUser = useAuthStore((state) => state.register);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -32,11 +33,7 @@ const RegisterPage = () => {
     setError(null);
 
     try {
-      await authService.register({
-        email: data.email,
-        username: data.username,
-        password: data.password,
-      });
+      await registerUser(data.email, data.username, data.password);
       navigate('/');
     } catch (err) {
       const error = err as { response?: { data?: { message?: string }; status?: number } };

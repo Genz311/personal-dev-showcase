@@ -1,4 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryProvider } from './providers/QueryProvider';
+import AppWrapper from './components/AppWrapper';
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/HomePage';
@@ -9,7 +11,9 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
+    <QueryProvider>
+      <Router>
+        <AppWrapper>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
@@ -58,7 +62,9 @@ function App() {
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
-    </Router>
+        </AppWrapper>
+      </Router>
+    </QueryProvider>
   );
 }
 

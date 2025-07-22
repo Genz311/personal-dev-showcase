@@ -1,4 +1,5 @@
 import { Navigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../store/authStore';
 
 interface ProtectedRouteProps {
   children: React.ReactNode;
@@ -6,8 +7,7 @@ interface ProtectedRouteProps {
 
 const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
   const location = useLocation();
-  // TODO: Replace with actual auth state from store
-  const isAuthenticated = false;
+  const { isAuthenticated } = useAuthStore();
 
   if (!isAuthenticated) {
     // Redirect to login page but save the attempted location

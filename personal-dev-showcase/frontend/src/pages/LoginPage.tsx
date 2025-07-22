@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import { authService, LoginCredentials } from '../services/authService';
+import { LoginCredentials } from '../services/authService';
+import { useAuthStore } from '../store/authStore';
 import Input from '../components/Input';
 import Button from '../components/Button';
 
 const LoginPage = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const login = useAuthStore((state) => state.login);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,7 +26,7 @@ const LoginPage = () => {
     setError(null);
 
     try {
-      await authService.login(data);
+      await login(data.email, data.password);
       navigate(from, { replace: true });
     } catch (err) {
       const error = err as { response?: { status: number } };
