@@ -6,7 +6,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // TODO: Replace with actual auth state from store
   const isAuthenticated = false;
-  const user = null;
+  // const user = null; // TODO: Get from auth store
 
   const handleLogout = () => {
     // TODO: Implement logout logic

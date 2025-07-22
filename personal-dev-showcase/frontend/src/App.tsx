@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/HomePage';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -15,8 +17,8 @@ function App() {
           {/* Public routes */}
           <Route path="projects" element={<div>Projects Page (TODO)</div>} />
           <Route path="developers" element={<div>Developers Page (TODO)</div>} />
-          <Route path="login" element={<div>Login Page (TODO)</div>} />
-          <Route path="register" element={<div>Register Page (TODO)</div>} />
+          <Route path="login" element={<LoginPage />} />
+          <Route path="register" element={<RegisterPage />} />
           
           {/* Protected routes */}
           <Route
