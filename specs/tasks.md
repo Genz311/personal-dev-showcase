@@ -1,6 +1,6 @@
 # Implementation Plan
 
-- [ ] 1. プロジェクト基盤とセットアップ
+- [x] 1. プロジェクト基盤とセットアップ
   - Create project structure with separate frontend and backend directories
   - Set up React + TypeScript + TailwindCSS frontend with Vite
   - Set up Node.js + Express + TypeScript backend
