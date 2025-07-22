@@ -13,7 +13,13 @@
     "lint": "eslint src --ext .ts",
     "typecheck": "tsc --noEmit",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "db:migrate": "npx prisma migrate dev",
+    "db:generate": "npx prisma generate",
+    "db:studio": "npx prisma studio",
+    "db:reset": "npx prisma migrate reset",
+    "db:seed": "ts-node src/scripts/seed.ts",
+    "db:test-connection": "ts-node src/scripts/test-db-connection.ts"
   },
   "keywords": [],
   "author": "",
