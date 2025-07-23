@@ -23,7 +23,7 @@ export const validateRegistrationData = (data: {
   email: string;
   username: string;
   password: string;
-  displayName?: string;
+  name?: string;
 }): ValidationError[] => {
   const errors: ValidationError[] = [];
 
@@ -48,10 +48,10 @@ export const validateRegistrationData = (data: {
     });
   }
 
-  if (data.displayName && data.displayName.trim().length === 0) {
+  if (data.name && data.name.trim().length === 0) {
     errors.push({
-      field: 'displayName',
-      message: 'Display name cannot be empty',
+      field: 'name',
+      message: 'Name cannot be empty',
     });
   }
 

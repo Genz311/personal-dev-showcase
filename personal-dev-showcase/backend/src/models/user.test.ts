@@ -25,7 +25,7 @@ describe('User Model', () => {
         email: 'test@example.com',
         username: 'testuser',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User',
+        name: 'Test User',
       };
 
       const user = await prisma.user.create({
@@ -36,7 +36,7 @@ describe('User Model', () => {
       expect(user.id).toBeDefined();
       expect(user.email).toBe(userData.email);
       expect(user.username).toBe(userData.username);
-      expect(user.displayName).toBe(userData.displayName);
+      expect(user.name).toBe(userData.name);
       expect(user.isPublic).toBe(true); // default value
       expect(user.createdAt).toBeDefined();
       expect(user.updatedAt).toBeDefined();
@@ -47,9 +47,9 @@ describe('User Model', () => {
         email: 'test2@example.com',
         username: 'testuser2',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User 2',
+        name: 'Test User 2',
         bio: 'Software developer',
-        githubUrl: 'https://github.com/testuser2',
+        github: 'https://github.com/testuser2',
         isPublic: false,
       };
 
@@ -58,7 +58,7 @@ describe('User Model', () => {
       });
 
       expect(user.bio).toBe(userData.bio);
-      expect(user.githubUrl).toBe(userData.githubUrl);
+      expect(user.github).toBe(userData.github);
       expect(user.isPublic).toBe(false);
     });
 
@@ -67,7 +67,7 @@ describe('User Model', () => {
         email: 'test@example.com',
         username: 'testuser1',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User 1',
+        name: 'Test User 1',
       };
 
       // Create first user
@@ -89,7 +89,7 @@ describe('User Model', () => {
         email: 'test1@example.com',
         username: 'testuser',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User 1',
+        name: 'Test User 1',
       };
 
       // Create first user
@@ -116,14 +116,14 @@ describe('User Model', () => {
             email: 'user1@example.com',
             username: 'user1',
             password: await bcrypt.hash('password123', 10),
-            displayName: 'User One',
+            name: 'User One',
             isPublic: true,
           },
           {
             email: 'user2@example.com',
             username: 'user2',
             password: await bcrypt.hash('password123', 10),
-            displayName: 'User Two',
+            name: 'User Two',
             isPublic: false,
           },
         ],
@@ -167,7 +167,7 @@ describe('User Model', () => {
           email: 'test@example.com',
           username: 'testuser',
           password: await bcrypt.hash('password123', 10),
-          displayName: 'Test User',
+          name: 'Test User',
         },
       });
     });
@@ -176,15 +176,15 @@ describe('User Model', () => {
       const updatedUser = await prisma.user.update({
         where: { id: testUser.id },
         data: {
-          displayName: 'Updated Name',
+          name: 'Updated Name',
           bio: 'Updated bio',
-          githubUrl: 'https://github.com/updated',
+          github: 'https://github.com/updated',
         },
       });
 
-      expect(updatedUser.displayName).toBe('Updated Name');
+      expect(updatedUser.name).toBe('Updated Name');
       expect(updatedUser.bio).toBe('Updated bio');
-      expect(updatedUser.githubUrl).toBe('https://github.com/updated');
+      expect(updatedUser.github).toBe('https://github.com/updated');
       expect(updatedUser.updatedAt.getTime()).toBeGreaterThan(
         testUser.updatedAt.getTime()
       );
@@ -198,7 +198,7 @@ describe('User Model', () => {
           email: 'test@example.com',
           username: 'testuser',
           password: await bcrypt.hash('password123', 10),
-          displayName: 'Test User',
+          name: 'Test User',
         },
       });
 

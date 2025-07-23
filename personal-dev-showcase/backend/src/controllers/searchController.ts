@@ -61,8 +61,8 @@ export const searchProjects = async (req: Request, res: Response): Promise<void>
             select: {
               id: true,
               username: true,
-              displayName: true,
-              avatarUrl: true,
+              name: true,
+              profileImage: true,
             },
           },
         },

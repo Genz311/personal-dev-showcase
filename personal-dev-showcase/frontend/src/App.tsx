@@ -11,6 +11,9 @@ import EditProjectPage from './pages/EditProjectPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import ProjectsPage from './pages/ProjectsPage';
 import MyProjectsPage from './pages/MyProjectsPage';
+import ProfilePage from './pages/ProfilePage';
+import DevelopersPage from './pages/DevelopersPage';
+import DeveloperProfilePage from './pages/DeveloperProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -26,7 +29,8 @@ function App() {
           {/* Public routes */}
           <Route path="projects" element={<ProjectsPage />} />
           <Route path="projects/:id" element={<ProjectDetailPage />} />
-          <Route path="developers" element={<div>Developers Page (TODO)</div>} />
+          <Route path="developers" element={<DevelopersPage />} />
+          <Route path="developers/:id" element={<DeveloperProfilePage />} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
           
@@ -43,7 +47,7 @@ function App() {
             path="profile"
             element={
               <ProtectedRoute>
-                <div>Profile Page (TODO)</div>
+                <ProfilePage />
               </ProtectedRoute>
             }
           />
