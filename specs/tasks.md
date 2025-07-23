@@ -105,8 +105,8 @@
   - Test project detail rendering and navigation
   - _Requirements: 4.4, 5.1, 5.2, 5.3_
 
-- [ ] 8. プロジェクト一覧と検索機能
-- [ ] 8.1 プロジェクト一覧UI
+- [x] 8. プロジェクト一覧と検索機能
+- [x] 8.1 プロジェクト一覧UI
   - Create ProjectList and ProjectCard components
   - Implement responsive grid layout with TailwindCSS
   - Add search and filter controls

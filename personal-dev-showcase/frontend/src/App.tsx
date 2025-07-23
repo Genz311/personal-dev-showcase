@@ -9,6 +9,8 @@ import RegisterPage from './pages/RegisterPage';
 import CreateProjectPage from './pages/CreateProjectPage';
 import EditProjectPage from './pages/EditProjectPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
+import ProjectsPage from './pages/ProjectsPage';
+import MyProjectsPage from './pages/MyProjectsPage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -22,7 +24,7 @@ function App() {
           <Route index element={<HomePage />} />
           
           {/* Public routes */}
-          <Route path="projects" element={<div>Projects Page (TODO)</div>} />
+          <Route path="projects" element={<ProjectsPage />} />
           <Route path="projects/:id" element={<ProjectDetailPage />} />
           <Route path="developers" element={<div>Developers Page (TODO)</div>} />
           <Route path="login" element={<LoginPage />} />
@@ -33,7 +35,7 @@ function App() {
             path="my-projects"
             element={
               <ProtectedRoute>
-                <div>My Projects Page (TODO)</div>
+                <MyProjectsPage />
               </ProtectedRoute>
             }
           />
