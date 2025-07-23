@@ -11,6 +11,7 @@ import EditProjectPage from './pages/EditProjectPage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import ProjectsPage from './pages/ProjectsPage';
 import MyProjectsPage from './pages/MyProjectsPage';
+import ProfilePage from './pages/ProfilePage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -43,7 +44,7 @@ function App() {
             path="profile"
             element={
               <ProtectedRoute>
-                <div>Profile Page (TODO)</div>
+                <ProfilePage />
               </ProtectedRoute>
             }
           />
