@@ -62,6 +62,12 @@ const Header = () => {
                 >
                   Profile
                 </Link>
+                <Link
+                  to="/projects/new"
+                  className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors"
+                >
+                  Create Project
+                </Link>
                 <button
                   onClick={handleLogout}
                   className="text-gray-600 hover:text-indigo-600 transition-colors"
@@ -150,6 +156,13 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Profile
+                  </Link>
+                  <Link
+                    to="/projects/new"
+                    className="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition-colors text-center"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Create Project
                   </Link>
                   <button
                     onClick={() => {

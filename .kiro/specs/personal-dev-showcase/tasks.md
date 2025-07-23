@@ -47,29 +47,29 @@
   - Implement error handling for invalid credentials
   - _Requirements: 1.1, 1.2, 1.4_
 
-- [ ] 4. プロジェクトCRUD APIの実装
-- [ ] 4.1 プロジェクト管理APIエンドポイント
+- [x] 4. プロジェクトCRUD APIの実装
+- [x] 4.1 プロジェクト管理APIエンドポイント
   - Implement project CRUD endpoints (create, read, update, delete)
   - Add project visibility controls (public/private)
   - Create middleware for project ownership verification
   - Write comprehensive API tests for project operations
   - _Requirements: 2.1, 2.2, 2.3, 3.1, 3.2, 3.3_
 
-- [ ] 4.2 プロジェクト検索とフィルタリングAPI
+- [x] 4.2 プロジェクト検索とフィルタリングAPI
   - Implement project listing endpoint with pagination
   - Add search functionality by keywords and tech stack
   - Create filtering by technology categories
   - Write tests for search and filtering operations
   - _Requirements: 4.1, 4.2, 4.3_
 
-- [ ] 5. 基本的なフロントエンド構造
-- [ ] 5.1 ルーティングとレイアウトコンポーネント
+- [x] 5. 基本的なフロントエンド構造
+- [x] 5.1 ルーティングとレイアウトコンポーネント
   - Set up React Router with protected routes
   - Create Layout, Header, and Footer components
   - Implement basic responsive design with TailwindCSS
   - _Requirements: 5.1, 5.3_
 
-- [ ] 5.2 認証フォームコンポーネント
+- [x] 5.2 認証フォームコンポーネント
   - Create LoginForm and RegisterForm components
   - Implement form validation with React Hook Form
   - Add loading states and error handling
@@ -143,15 +143,15 @@
   - Test image upload user experience
   - _Requirements: 2.1, 5.2, 5.4_
 
-- [ ] 11. 状態管理とAPI統合
-- [ ] 11.1 TanStack Query統合
+- [x] 11. 状態管理とAPI統合
+- [x] 11.1 TanStack Query統合
   - Set up TanStack Query for server state management
   - Implement caching strategies for projects and users
   - Add optimistic updates for better UX
   - Create custom hooks for API operations
   - _Requirements: 2.2, 4.1, 4.4_
 
-- [ ] 11.2 Zustand状態管理
+- [x] 11.2 Zustand状態管理
   - Implement client-side state management with Zustand
   - Add authentication state management
   - Create UI state stores (modals, notifications)

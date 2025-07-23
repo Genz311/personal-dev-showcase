@@ -6,6 +6,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/HomePage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
+import CreateProjectPage from './pages/CreateProjectPage';
+import EditProjectPage from './pages/EditProjectPage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -45,7 +47,7 @@ function App() {
             path="projects/new"
             element={
               <ProtectedRoute>
-                <div>Create Project Page (TODO)</div>
+                <CreateProjectPage />
               </ProtectedRoute>
             }
           />
@@ -53,7 +55,7 @@ function App() {
             path="projects/:id/edit"
             element={
               <ProtectedRoute>
-                <div>Edit Project Page (TODO)</div>
+                <EditProjectPage />
               </ProtectedRoute>
             }
           />
