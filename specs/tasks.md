@@ -77,13 +77,13 @@
   - _Requirements: 1.1, 1.2, 1.4_
 
 - [ ] 6. ユーザー管理機能
-- [ ] 6.1 ユーザープロフィールAPI
+- [x] 6.1 ユーザープロフィールAPI
   - Implement user profile CRUD endpoints
   - Add profile image upload functionality
   - Create tests for user profile operations
   - _Requirements: 1.3, 6.1, 6.2_
 
-- [ ] 6.2 プロフィール管理UI
+- [x] 6.2 プロフィール管理UI
   - Create UserProfile and ProfileForm components
   - Implement profile editing with image upload
   - Add profile visibility controls
@@ -114,14 +114,14 @@
   - _Requirements: 4.1, 4.2, 4.3, 5.1, 5.3_
 
 - [ ] 9. ユーザー発見機能
-- [ ] 9.1 開発者一覧とプロフィール表示
+- [x] 9.1 開発者一覧とプロフィール表示
   - Implement developer listing API endpoint
   - Create UserCard component for developer listings
   - Add developer profile pages with project showcases
   - Test developer discovery functionality
   - _Requirements: 6.1, 6.3_
 
-- [ ] 9.2 開発者プロフィール統合
+- [x] 9.2 開発者プロフィール統合
   - Connect user profiles with their public projects
   - Implement contact information display controls
   - Add social media links integration
