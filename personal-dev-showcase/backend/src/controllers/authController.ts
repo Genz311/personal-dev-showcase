@@ -6,10 +6,10 @@ import { validateRegistrationData, validateLoginData } from '../utils/validation
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {
-    const { email, username, password, displayName } = req.body;
+    const { email, username, password, name } = req.body;
 
     // Validate input
-    const validationErrors = validateRegistrationData({ email, username, password, displayName });
+    const validationErrors = validateRegistrationData({ email, username, password, name });
     if (validationErrors.length > 0) {
       res.status(400).json({ errors: validationErrors });
       return;
@@ -45,13 +45,13 @@ export const register = async (req: Request, res: Response): Promise<void> => {
         email: email.toLowerCase(),
         username: username.toLowerCase(),
         password: hashedPassword,
-        displayName: displayName || username,
+        name: name || username,
       },
       select: {
         id: true,
         email: true,
         username: true,
-        displayName: true,
+        name: true,
         isPublic: true,
         createdAt: true,
       },

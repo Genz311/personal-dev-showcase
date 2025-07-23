@@ -30,7 +30,7 @@ describe('Technology Model', () => {
         email: 'test@example.com',
         username: 'testuser',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User',
+        name: 'Test User',
       },
     });
 
@@ -171,7 +171,7 @@ describe('Technology Model', () => {
           email: 'user2@example.com',
           username: 'user2',
           password: await bcrypt.hash('password123', 10),
-          displayName: 'User Two',
+          name: 'User Two',
         },
       });
 

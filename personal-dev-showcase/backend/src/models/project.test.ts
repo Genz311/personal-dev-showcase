@@ -25,7 +25,7 @@ describe('Project Model', () => {
         email: 'test@example.com',
         username: 'testuser',
         password: await bcrypt.hash('password123', 10),
-        displayName: 'Test User',
+        name: 'Test User',
       },
     });
   });

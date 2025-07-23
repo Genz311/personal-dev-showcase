@@ -29,7 +29,7 @@ describe('Auth Controller', () => {
       email: 'test@example.com',
       username: 'testuser',
       password: 'password123',
-      displayName: 'Test User',
+      name: 'Test User',
     };
 
     it('should register a new user successfully', async () => {
@@ -87,7 +87,7 @@ describe('Auth Controller', () => {
           email: validUserData.email.toLowerCase(),
           username: 'anotheruser',
           password: await hashPassword('password123'),
-          displayName: 'Another User',
+          name: 'Another User',
         },
       });
 
@@ -106,7 +106,7 @@ describe('Auth Controller', () => {
           email: 'another@example.com',
           username: validUserData.username.toLowerCase(),
           password: await hashPassword('password123'),
-          displayName: 'Another User',
+          name: 'Another User',
         },
       });
 
@@ -134,7 +134,7 @@ describe('Auth Controller', () => {
       expect(response.status).toBe(409);
     });
 
-    it('should use username as displayName if not provided', async () => {
+    it('should use username as name if not provided', async () => {
       const response = await request(app)
         .post('/api/auth/register')
         .send({
@@ -144,7 +144,7 @@ describe('Auth Controller', () => {
         });
 
       expect(response.status).toBe(201);
-      expect(response.body.user.displayName).toBe('testuser');
+      expect(response.body.user.name).toBe('testuser');
     });
   });
 
@@ -158,7 +158,7 @@ describe('Auth Controller', () => {
           email: 'test@example.com',
           username: 'testuser',
           password: await hashPassword(password),
-          displayName: 'Test User',
+          name: 'Test User',
         },
       });
     });
@@ -250,7 +250,7 @@ describe('Auth Controller', () => {
           email: 'test@example.com',
           username: 'testuser',
           password: await hashPassword('password123'),
-          displayName: 'Test User',
+          name: 'Test User',
         },
       });
 
@@ -322,7 +322,7 @@ describe('Auth Controller', () => {
           email: 'test@example.com',
           username: 'testuser',
           password: await hashPassword('password123'),
-          displayName: 'Test User',
+          name: 'Test User',
         },
       });
 

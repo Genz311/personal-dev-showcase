@@ -77,9 +77,9 @@ async function main() {
         email: 'demo@example.com',
         username: 'demo_user',
         password: hashedPassword,
-        displayName: 'Demo User',
+        name: 'Demo User',
         bio: 'A sample user for demonstration purposes',
-        githubUrl: 'https://github.com/demo-user',
+        github: 'https://github.com/demo-user',
         isPublic: true,
       },
     });

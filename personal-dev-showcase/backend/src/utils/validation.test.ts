@@ -64,14 +64,14 @@ describe('Validation Utils', () => {
         email: 'test@example.com',
         username: 'testuser',
         password: 'password123',
-        displayName: 'Test User',
+        name: 'Test User',
       };
 
       const errors = validateRegistrationData(data);
       expect(errors).toHaveLength(0);
     });
 
-    it('should validate without optional displayName', () => {
+    it('should validate without optional name', () => {
       const data = {
         email: 'test@example.com',
         username: 'testuser',
@@ -130,17 +130,17 @@ describe('Validation Utils', () => {
       expect(errors.map(e => e.field)).toEqual(['email', 'username', 'password']);
     });
 
-    it('should reject empty displayName', () => {
+    it('should reject empty name', () => {
       const data = {
         email: 'test@example.com',
         username: 'testuser',
         password: 'password123',
-        displayName: '   ',
+        name: '   ',
       };
 
       const errors = validateRegistrationData(data);
       expect(errors).toHaveLength(1);
-      expect(errors[0].field).toBe('displayName');
+      expect(errors[0].field).toBe('name');
     });
   });
 
