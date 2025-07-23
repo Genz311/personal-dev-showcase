@@ -98,7 +98,7 @@
   - Write tests for project form operations
   - _Requirements: 2.1, 2.2, 2.4, 3.1, 3.3, 5.4_
 
-- [ ] 7.2 プロジェクト詳細表示
+- [x] 7.2 プロジェクト詳細表示
   - Create ProjectDetail component
   - Implement responsive project information display
   - Add GitHub and live demo links

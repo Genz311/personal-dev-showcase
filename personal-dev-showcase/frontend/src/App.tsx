@@ -8,6 +8,7 @@ import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import CreateProjectPage from './pages/CreateProjectPage';
 import EditProjectPage from './pages/EditProjectPage';
+import ProjectDetailPage from './pages/ProjectDetailPage';
 import NotFoundPage from './pages/NotFoundPage';
 import './App.css';
 
@@ -22,6 +23,7 @@ function App() {
           
           {/* Public routes */}
           <Route path="projects" element={<div>Projects Page (TODO)</div>} />
+          <Route path="projects/:id" element={<ProjectDetailPage />} />
           <Route path="developers" element={<div>Developers Page (TODO)</div>} />
           <Route path="login" element={<LoginPage />} />
           <Route path="register" element={<RegisterPage />} />
